@@ -7,9 +7,10 @@ japanese_nouns_as_katakana = Shiritori.japanese_nouns.map {|string| Shiritori.to
 
 puts "I'll let you start. What's your first word?"
 loop do
-  word = Shiritori.to_katakana(gets.chomp)
+  word = Shiritori.to_katakana_from_romaji(gets.chomp)
   if japanese_nouns_as_katakana.include?(word)
-    puts Shiritori.japanese_nouns.sample
+    katakana = Shiritori.new_word_begin_with_char(Shiritori.last_char(word), Shiritori.japanese_nouns)
+    puts Shiritori.to_romaji_from_katakana(katakana)
   else
     puts "That doesn't count! You lose."
     exit

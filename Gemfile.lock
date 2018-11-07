@@ -2,12 +2,16 @@ GEM
   remote: https://rubygems.org/
   specs:
     minitest (5.11.3)
+    moji (1.6)
+    mojinizer (0.2.2)
+      moji (~> 1.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   minitest
+  mojinizer
 
 BUNDLED WITH
-   1.16.1
+   1.16.6
